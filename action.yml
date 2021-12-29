@@ -1,0 +1,20 @@
+---
+
+name: Split comment into args
+description: This action will split pull request comment body as arguments into JSON key-values
+branding:
+  icon: feather
+  color: white
+
+inputs:
+  comment:
+    description: Comment to split
+    required: true
+
+outputs:
+  result:
+    description: Action Result as JSON
+
+runs:
+  using: node12
+  main: ./dist/index.js

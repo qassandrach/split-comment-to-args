@@ -1,0 +1,25 @@
+{
+  "name": "pr-comment-to-json",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Github Action for splitting pull request comment body into JSON key-values",
+  "main": "main.js",
+  "scripts": {
+    "build": "ncc build main.js --out dist/ ",
+    "tsc": "npm run clean && tsc",
+    "clean": "rimraf dist/*"
+  },
+  "author": "Qassandra Chaidir <qassiechaidir@gmail.com>",
+  "dependencies": {
+    "@actions/core": "^1.6.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.31.1",
+    "cz-conventional-changelog": "^3.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
