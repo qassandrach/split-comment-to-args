@@ -1,6 +1,6 @@
 ---
 
-name: Split comment into args
+name: Split pull request comment body arguments into JSON key-values
 description: This action will split pull request comment body as arguments into JSON key-values
 branding:
   icon: feather
