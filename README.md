@@ -19,14 +19,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Split comment to args
-        uses: qassandrach/comment-to-args
+        uses: qassandrach/split-comment-to-args
         id: split
         with:
           comment: ${{ github.event.comment.body }}
 
       - name: Some other action
         run: |
-          echo ${{ fromJSON(steps.split.outputs.result) }}
+          echo ${{ fromJSON(steps.split.outputs.result.<key>) }}
 ```
 
 ## Inputs
